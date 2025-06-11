@@ -53,6 +53,12 @@ python app.py
 ```
 The backend will run on http://localhost:5000
 
+### Use Docker Container
+```
+docker build -t web-steve .
+docker run -p 5000:5000 --env-file backend/.env web-steve
+```
+
 ### Frontend Setup
 1. Navigate to the frontend directory:
 ```bash
