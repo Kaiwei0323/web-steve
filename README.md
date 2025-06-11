@@ -2,9 +2,11 @@
 
 A web application for monitoring and managing AI edge devices with interactive data visualizations and device management capabilities.
 
+---
+
 ## Project Structure
 ```
-edgeai-insight-html-js-v2/
+web-steve/
 ├── frontend/
 │   ├── static/
 │   │   ├── css/
@@ -16,26 +18,36 @@ edgeai-insight-html-js-v2/
     └── requirements.txt
 ```
 
+---
+
+## Software Environments
+- Python 3.10
+- flask
+- flask_cors
+- dotenv
+- pymongo[srv]
+
+---
+
 ## Setup Instructions
+
+### Clone the Repository
+```
+git clone https://github.com/Kaiwei0323/web-steve.git
+```
 
 ### Backend Setup
 1. Navigate to the backend directory:
 ```bash
-cd backend
+cd web-steve/backend
 ```
 
-2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/Scripts/activate  # Windows
-```
-
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Start the Flask server:
+3. Start the Flask server:
 ```bash
 python app.py
 ```
