@@ -1,0 +1,88 @@
+<!-- Logo Section -->
+<div class="logo-section">
+    <img src="/static/images/inventec-logo.png" alt="Inventec Logo" class="logo">
+</div>
+
+<!-- Device Count Section -->
+<div class="device-count-section">
+    <div class="device-stat">
+        <span class="stat-label">Total Devices</span>
+        <span class="device-count" id="deviceCount">0</span>
+    </div>
+</div>
+
+<!-- Search and Filter Section -->
+<div class="controls-section">
+    <!-- Search Box -->
+    <div class="search-box">
+        <i class="bi bi-search"></i>
+        <input type="text" 
+               id="searchInput" 
+               class="form-control" 
+               placeholder="Search by device name or model ID..."
+               aria-label="Search devices">
+        <button class="btn btn-clear" id="clearSearch" aria-label="Clear search">
+            <i class="bi bi-x"></i>
+        </button>
+        <span class="search-results-count" id="searchResultsCount"></span>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-container">
+        <!-- Device Category Filter -->
+        <div class="filter-group">
+            <label class="filter-label" for="categoryFilter">Device Category</label>
+            <select class="form-select" id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="ai_edge">Edge AI Device</option>
+                <option value="server">Edge Server</option>
+            </select>
+        </div>
+
+        <!-- Model Filter -->
+        <div class="filter-group">
+            <label class="filter-label" for="modelFilter">Model</label>
+            <select class="form-select" id="modelFilter">
+                <option value="">All Models</option>
+                <option value="jetson">NVIDIA Jetson</option>
+                <option value="intel">Intel NCS</option>
+                <option value="amd">AMD EPYC</option>
+            </select>
+        </div>
+
+        <!-- Super Mode Filter -->
+        <div class="filter-group">
+            <label class="filter-label" for="statusFilter">Super Mode</label>
+            <select class="form-select" id="statusFilter">
+                <option value="">All Modes</option>
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- Active Filters Section -->
+<div class="active-filters-section">
+    <div class="active-filters-header">
+        <i class="bi bi-funnel-fill"></i>
+        <span>Active Filters</span>
+    </div>
+    <div id="activeFiltersContent" class="active-filters-content">
+        <span class="no-filters">No active filters</span>
+    </div>
+</div>
+
+<!-- Device Cards Container -->
+<div id="deviceCards" class="row g-4">
+    <!-- Device cards will be dynamically inserted here -->
+</div>
+
+<!-- Include the specs component -->
+{% include 'specs.html' %}
+
+<!-- Load Grid Fix Scripts -->
+<script src="/static/js/test-layout.js"></script>
+<script src="/static/js/apply-grid-fix.js"></script>
+</body>
+</html> 

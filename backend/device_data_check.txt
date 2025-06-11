@@ -1,0 +1,50 @@
+Device found: Edge AI NCOX
+_id: 67f4044ea91332165a91a8ab
+description_summary: High-performance edge AI device with NVIDIA Jetson Orin NX processor, optimized for industrial applications requiring advanced computer vision and real-time AI processing.
+
+Complete device data:
+{
+  "_id": {
+    "$oid": "67f4044ea91332165a91a8ab"
+  },
+  "deviceName": "Edge AI NCOX",
+  "Category": "Specification",
+  "Processor": "NVIDIA Jetson Orin NX",
+  "AI Performance": "16GB LPDDR5 : Up to 100",
+  "Memory": "16GB/8GB LPDDR5",
+  "Storage": "External NVMe via x4 PCIe",
+  "Wireless": "None",
+  "WLAN": "None",
+  "BT": "None",
+  "Ethernet": "RJ45 1 x Gigabit Ethernet",
+  "Camera": "RJ45 1 x 10/100 Ethernet",
+  "I/O": "1 x USB 2.0 Micro-B",
+  "Button": "1 x Reset button",
+  "Operating Tempeture": "-20 ~ 60\u00b0C",
+  "Dimension": "90(W) x 118(D) x 69(H) mm",
+  "Weight": "650g",
+  "OS": "Linux 5.10/ Ubuntu 20.04",
+  "Power": "1 x DC-In 12~19V",
+  "Super Mode": null,
+  "Video CHs": null,
+  "Network protocol": null,
+  "Network Connection interface": null,
+  "Video": null,
+  "Expansion": null,
+  "Security": null,
+  "GPU": null,
+  "CPU": null,
+  "Jetson Module": null,
+  "Jetson Orin Nano 4GB": null,
+  "Jetson Orin Nano 8GB": null,
+  "Jetson Orin NX 8GB": null,
+  "Jetson Orin NX 16GB": null,
+  "Jetson AGX Orin 32GB": null,
+  "Jetson AGX Orin 64GB": null,
+  "tag": "Best Seller",
+  "description_summary": "High-performance edge AI device with NVIDIA Jetson Orin NX processor, optimized for industrial applications requiring advanced computer vision and real-time AI processing.",
+  "device_description": "High-performance edge AI device with NVIDIA Jetson Orin NX processor, optimized for industrial applications requiring advanced computer vision and real-time AI processing."
+}
+
+All device names in collection: ['Edge AI AIOOX', 'Edge AI NCON', 'Edge AI NCOX', 'Edge AI Nexxis', 'Edge AI PSON', 'Edge AI PSOX', 'Edge AI TOP1', 'Edge AI TT-310', 'Edge AI UCON']
+Total devices in collection: 9

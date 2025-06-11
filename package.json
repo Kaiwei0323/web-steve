@@ -1,0 +1,23 @@
+{
+  "name": "edge-ai-insight",
+  "version": "1.0.0",
+  "description": "Edge AI Device Management System",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^26.1.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/tests/**/*.js"
+    ],
+    "verbose": true
+  },
+  "dependencies": {
+    "mongodb": "^6.16.0"
+  }
+}

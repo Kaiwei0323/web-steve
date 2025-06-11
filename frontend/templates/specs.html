@@ -1,0 +1,454 @@
+<!-- Specs Component -->
+<div class="specs-component">
+    <!-- Core Specs Section -->
+    <div class="basic-specs-container">
+        <div class="specs-section-header">
+            <div class="specs-icon-title">
+                <i class="fas fa-cog"></i>
+                <h3>Core System Specifications</h3>
+            </div>
+        </div>
+        
+        <div class="specs-cards-container">
+            <!-- Processor Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-microchip"></i>
+                    <span>Processor</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value processor-value">{{device.processor}}</span>
+                </div>
+            </div>
+
+            <!-- Memory Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-memory"></i>
+                    <span>Memory</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value memory-value">{{device.memory}}</span>
+                </div>
+            </div>
+
+            <!-- Storage Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-hdd"></i>
+                    <span>Storage</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value storage-value">{{device.storage}}</span>
+                </div>
+            </div>
+
+            <!-- OS Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-desktop"></i>
+                    <span>Operating System</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value os-value">{{device.os}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specs Toggle Separator -->
+    <div class="specs-toggle-separator"></div>
+
+    <!-- Full Specs Section -->
+    <div class="full-specs-container">
+        <div class="specs-section-header">
+            <div class="specs-icon-title">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>Full Specifications</h3>
+            </div>
+        </div>
+
+        <div class="specs-cards-container">
+            <!-- Ethernet Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Ethernet</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value">{{device.ethernet}}</span>
+                </div>
+            </div>
+
+            <!-- WLAN Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-wifi"></i>
+                    <span>WLAN</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value">{{device.wlan}}</span>
+                </div>
+            </div>
+
+            <!-- GPU Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-microchip"></i>
+                    <span>GPU</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value">{{device.gpu}}</span>
+                </div>
+            </div>
+
+            <!-- Super Mode Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-bolt"></i>
+                    <span>Super Mode</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value">{{device.super_mode}}</span>
+                </div>
+            </div>
+
+            <!-- Operating Temperature Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-thermometer-half"></i>
+                    <span>Operating Temperature</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value">{{device.operating_temperature}}</span>
+                </div>
+            </div>
+
+            <!-- Weight Card -->
+            <div class="spec-card weight-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-weight"></i>
+                    <span>Weight</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value">{{device.weight}}</span>
+                </div>
+            </div>
+
+            <!-- Video Channels Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-video"></i>
+                    <span>Video Channels</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value">{{device.video_channels}}</span>
+                </div>
+            </div>
+
+            <!-- Expansion Card -->
+            <div class="spec-card">
+                <div class="spec-card-header">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <span>Expansion</span>
+                </div>
+                <div class="spec-card-content">
+                    <span class="spec-value">{{device.expansion}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* These styles will be overridden by the grid-fix.css file */
+.specs-component {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    box-sizing: border-box;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.specs-icon-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.specs-icon-title i {
+    font-size: 1.2em;
+    color: #0078d4;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.specs-icon-title h3 {
+    color: #333;
+    font-size: 1.4em;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.specs-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.spec-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 4px solid #0078d4;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.spec-card-header {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 8px 12px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.spec-card-header i {
+    color: #0078d4;
+    margin-right: 8px;
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.spec-card-header span {
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    font-size: 14px;
+}
+
+.spec-card-content {
+    padding: 8px 12px;
+    color: #444;
+    line-height: 1.3;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.spec-value {
+    text-align: left;
+    font-weight: 500;
+    color: #444;
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    display: block;
+    font-size: 13px;
+    line-height: 1.3;
+    min-width: 0;
+}
+
+/* Specific styles for different spec types */
+.processor-value {
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.memory-value {
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.storage-value {
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.os-value {
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+/* Media queries for responsive behavior */
+@media (max-width: 768px) {
+    .specs-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .specs-component {
+        padding: 10px;
+    }
+    
+    .spec-card-header {
+        padding: 6px 10px;
+    }
+    
+    .spec-card-content {
+        padding: 8px 10px;
+    }
+}
+</style>
+
+<!-- Load the zoom-aware grid fix script -->
+<script>
+    // Ensure grid fix script is loaded only once
+    if (!window.gridFixLoaded) {
+        window.gridFixLoaded = true;
+        
+        // Create script element
+        const script = document.createElement('script');
+        script.src = '/static/js/apply-grid-fix.js';
+        script.async = true;
+        
+        // Append to document
+        document.body.appendChild(script);
+        
+        // Log for debugging
+        console.log('Grid fix script loaded from specs component');
+    }
+</script>
+
+<!-- Fix text display at different zoom levels -->
+<script>
+    // Apply additional fixes for text content
+    function fixSpecValues() {
+        // Find all spec values
+        const specValues = document.querySelectorAll('.spec-value');
+        
+        // Apply styles to ensure text displays properly
+        specValues.forEach(value => {
+            // Make it a block element
+            value.style.display = 'block';
+            value.style.width = '100%';
+            value.style.overflow = 'hidden';
+            value.style.wordBreak = 'break-word';
+            value.style.overflowWrap = 'break-word';
+            value.style.whiteSpace = 'normal';
+            value.style.boxSizing = 'border-box';
+            value.style.fontSize = '12px';
+            value.style.lineHeight = '1.2';
+            
+            // Check if this contains OS info
+            if (value.textContent.includes('Linux') || 
+                value.textContent.includes('Ubuntu')) {
+                value.style.fontSize = '12px';
+            }
+            
+            // Check if this contains processor info
+            if (value.textContent.includes('NVIDIA') || 
+                value.textContent.includes('Jetson')) {
+                value.style.fontSize = '12px';
+            }
+        });
+    }
+    
+    // Run after the component is loaded
+    document.addEventListener('DOMContentLoaded', fixSpecValues);
+    
+    // Also run after any updates
+    const observer = new MutationObserver(function(mutations) {
+        fixSpecValues();
+    });
+    
+    // Observe the entire document
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+</script>
+
+<!-- Add Font Awesome if not already included in the main template -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+/* Adding specific fixes for card layout */
+.spec-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 4px solid #0078d4;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.spec-card-header {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+/* Make sure the layout works well with CSS Grid */
+.specs-component {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Add additional responsive adjustments */
+@media (max-width: 576px) {
+    .specs-cards-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .spec-card-header {
+        padding: 10px 12px;
+    }
+    
+    .spec-card-content {
+        padding: 12px;
+    }
+    
+    .specs-component {
+        padding: 15px;
+        gap: 20px;
+    }
+} 

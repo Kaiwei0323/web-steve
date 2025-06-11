@@ -1,0 +1,630 @@
+/* Direct grid-template-columns fix */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 16px !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    min-width: 0 !important; /* Prevents grid overflow */
+    box-sizing: border-box !important;
+}
+
+/* Applications grid fix to match Device Specs */
+.applications-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    padding: 16px !important;
+    margin-bottom: 1rem !important;
+}
+
+.application-item {
+    display: flex !important;
+    flex-direction: column !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    border-left: 4px solid !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+    overflow: hidden !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    background-color: #ffffff !important;
+    box-sizing: border-box !important;
+}
+
+.application-item .app-header {
+    padding: 12px 15px !important;
+    background-color: #f5f5f5 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Fix for truncated application names */
+.application-item .app-header span {
+    font-weight: 600 !important;
+    color: #333 !important;
+    font-size: 14px !important;
+    white-space: normal !important; /* Allow text to wrap */
+    overflow: visible !important; /* Don't hide overflow */
+    text-overflow: clip !important; /* Don't add ellipsis */
+    word-break: break-word !important;
+    line-height: 1.2 !important; /* Compact line height */
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.application-item .app-content {
+    padding: 12px 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.application-item .app-description {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    display: block !important;
+    margin-top: 8px !important;
+}
+
+/* Fix for application title display */
+.application-item .app-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    word-break: break-word !important;
+    width: 100% !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+}
+
+/* Specs component fix for browser zoom */
+.specs-component {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    width: 100% !important; 
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+
+/* Always maintain two columns, regardless of zoom level */
+.specs-cards-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    overflow: visible !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Improve text handling for better display at all zoom levels */
+.spec-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important; /* Critical for preventing overflow */
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    border-left: 4px solid #0078d4 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+.spec-card-header, .spec-card-content {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+    text-overflow: ellipsis !important;
+    min-width: 0 !important; /* Ensures content can shrink */
+}
+
+.spec-card-header {
+    padding: 8px 12px !important; /* Reduced padding to fit more content */
+    display: flex !important;
+    align-items: center !important;
+}
+
+.spec-card-header i {
+    font-size: 14px !important;
+    width: 16px !important; /* Reduced to save space */
+    flex-shrink: 0 !important;
+    margin-right: 8px !important;
+}
+
+.spec-card-header span {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    min-width: 0 !important;
+}
+
+.spec-card-content {
+    padding: 8px 12px !important;
+    line-height: 1.2 !important;
+    min-width: 0 !important;
+}
+
+.spec-card-content .spec-value {
+    display: block !important;
+    width: 100% !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    font-size: 13px !important; /* Smaller font to fit content */
+    line-height: 1.3 !important;
+    min-width: 0 !important;
+}
+
+/* Fix for core specs content */
+.basic-specs-container .spec-card,
+.full-specs-container .spec-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Fix for the OS text that gets cut off */
+.spec-card-content .spec-value[innertext*="Linux"],
+.spec-card-content .spec-value[innertext*="Ubuntu"] {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+}
+
+/* Override for single view */
+.single-view span.spec-value,
+.single-view .spec-row div.spec-value span,
+.single-view .specs-grid .spec-row div.spec-value span,
+.single-view .specs-category-content .specs-grid .spec-row div.spec-value span,
+.single-view .specs-category-content .spec-row div.spec-value span {
+    text-align: right !important;
+    float: right !important;
+    direction: ltr !important;
+    display: inline-block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    justify-content: flex-end !important;
+    min-width: 0 !important;
+}
+
+/* Media query only for true mobile screens, not for zoom */
+@media (max-width: 576px) {
+    .specs-grid,
+    .specs-cards-container,
+    .applications-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .spec-row {
+        padding: 10px 12px !important;
+    }
+    
+    .spec-card-header,
+    .application-item .app-header {
+        padding: 6px 10px !important;
+    }
+    
+    .spec-card-content,
+    .application-item .app-content {
+        padding: 8px 10px !important;
+    }
+}
+
+/* Ensure table cells don't get cut off */
+td.spec-value,
+th.spec-value,
+.specs-table .spec-value {
+    white-space: normal !important;
+    word-break: break-word !important;
+    min-width: 0 !important;
+}
+
+/* Specific fix for Jetson card which might be too wide */
+.spec-card-content .spec-value:contains("NVIDIA Jetson"),
+.spec-card-content .spec-value:contains("NVMe") {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+}
+
+/* Fix for grid overflow issues */
+.specs-section-header, 
+.specs-icon-title,
+.basic-specs-container,
+.full-specs-container {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* Override any max-width settings that might cause issues */
+.specs-component *,
+.specs-cards-container *,
+.spec-card * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Add important specific fix for the zoomed display */
+.specs-cards-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* Single view override - forces two columns on wider screens */
+.single-view .specs-grid,
+.single-view .specs-category-content .specs-grid,
+.specs-category-content.single-view .specs-grid,
+div[class*="specs-category"] .single-view .specs-grid {
+    /* Fixed two-column layout */
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Force two columns */
+    grid-template-rows: auto !important;
+    grid-auto-flow: row !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    gap: 16px !important; /* Wider gap between columns */
+}
+
+/* Make headers and descriptions span both columns */
+.single-view .specs-category-header,
+.single-view .category-description,
+.single-view .expandable-section,
+.single-view .specs-toggle-container {
+    grid-column: 1 / -1 !important; /* Span all columns */
+}
+
+/* Allow items to span full width when in single column */
+@media (max-width: 767px) {
+    .specs-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* All children span full width on mobile */
+    .specs-grid > * {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+    }
+}
+
+/* Full width for spec rows in single column view */
+.single-view .spec-row,
+.single-view div.spec-row,
+.single-view .specs-grid div.spec-row {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 8px !important;
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+/* Adjust label and value display for better space utilization in single view */
+.single-view .spec-label-container,
+.single-view div.spec-label-container {
+    min-width: 140px !important;
+    width: 35% !important;
+    flex-shrink: 0 !important;
+}
+
+/* Handle the spec-value element and its children */
+.single-view .spec-value,
+.single-view div.spec-value,
+.single-view span.spec-value,
+.single-view .specs-grid .spec-row .spec-value {
+    width: 65% !important;
+    text-align: right !important;
+    float: right !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    flex-grow: 1 !important;
+    direction: ltr !important;
+}
+
+/* Ensure spans inside spec-value also respect alignment */
+.single-view .spec-value span,
+.single-view div.spec-value span,
+.single-view span.spec-value span,
+.single-view .spec-value > * {
+    text-align: right !important;
+    float: right !important;
+    direction: ltr !important;
+    display: inline-block !important;
+    width: auto !important;
+}
+
+/* Full width for category headers and description */
+.single-view .specs-category-header,
+.single-view .category-description {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-column: 1 / -1 !important; /* Ensure headers span all columns */
+}
+
+/* Ensure specs cards take up full width in single view */
+.single-view .specs-category {
+    width: 100% !important;
+}
+
+/* Optimize padding in single view */
+.single-view .specs-category-content {
+    padding: 12px !important;
+}
+
+.single-view .spec-row {
+    padding: 10px 14px !important;
+}
+
+/* Ensure proper spec row styling */
+.spec-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 16px !important;
+    height: 100% !important;
+    background-color: #fff !important;
+    border-radius: 8px !important;
+    border: 1px solid #e9ecef !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+}
+
+/* Basic vs Full spec styling */
+.spec-row.basic-spec-item {
+    background-color: #fff !important;
+    border-left: 3px solid #0d6efd !important;
+}
+
+.spec-row.full-spec-item {
+    background-color: #f8f9fa !important;
+    border-left: 3px solid #6c757d !important;
+}
+
+/* Hover effect classes */
+.spec-row-hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1) !important;
+    border-color: rgba(66, 133, 244, 0.5) !important;
+    background-color: #fafafa !important;
+}
+
+.spec-row-active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    background-color: #f5f5f5 !important;
+}
+
+/* Highlight element for hover effect */
+.spec-highlight {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 4px !important;
+    height: 100% !important;
+    transform: scaleY(0) !important;
+    transform-origin: top !important;
+    transition: transform 0.3s ease !important;
+}
+
+.spec-highlight-visible {
+    transform: scaleY(1) !important;
+}
+
+/* Ensure proper positioning for highlight effect */
+.spec-row-relative {
+    position: relative !important;
+}
+
+/* Spec icon styling */
+.spec-row .bi {
+    transition: color 0.3s ease !important;
+    color: #4285F4 !important;
+}
+
+/* Reset any inherited styles that might override grid layout */
+.specs-category-content {
+    padding: 16px !important;
+    width: 100% !important;
+}
+
+.specs-category-content .spec-row {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+/* Adjust existing conflicts */
+.device-specs-grid {
+    display: block !important;
+    margin-top: 0 !important;
+    width: 100% !important;
+}
+
+/* Additional styles to improve content display at any zoom level */
+.spec-card-content {
+    padding: 12px !important;
+    line-height: 1.4 !important;
+}
+
+.spec-card-header {
+    padding: 10px 15px !important;
+}
+
+.spec-card-header i {
+    font-size: 14px !important;
+    width: 18px !important;
+}
+
+.spec-card-header span {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+/* Additional span.spec-value overrides based on DevTools inspection */
+span.spec-value,
+div.spec-value span,
+.spec-row div.spec-value span,
+.specs-grid .spec-row div.spec-value span,
+.specs-category-content .specs-grid .spec-row div.spec-value span,
+.single-view span.spec-value {
+    text-align: left !important; /* Base text alignment for non-single view */
+    direction: ltr !important;
+    white-space: normal !important;
+    word-break: break-word !important; 
+    overflow-wrap: break-word !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+}
+
+/* Extra override for specs-tab content */
+.specs-tab span.spec-value,
+.specs-tab div.spec-value span,
+div.specs-tab span.spec-value,
+.single-view .specs-tab span.spec-value {
+    width: auto !important;
+    text-align: right !important;
+    float: right !important;
+    max-width: 100% !important;
+}
+
+/* Direct override for styles we saw in DevTools */
+.single-view [style*="text-align: left"],
+.single-view [style*="text-align:left"] {
+    text-align: right !important;
+}
+
+/* Target parent container structure */
+.device-specs-grid.single-view {
+    width: 100% !important;
+}
+
+.device-specs-grid.single-view .specs-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* Force two columns */
+}
+
+/* Ensure spec rows in device-specs-grid use full width */
+.device-specs-grid.single-view .spec-row {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Make category headers and descriptions span full width */
+.specs-category-header,
+.category-description,
+.expandable-section,
+.specs-toggle-container {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+}
+
+/* Fix alignment of spec keys and values */
+.spec-key {
+    display: inline-block !important;
+    width: auto !important;
+    font-weight: 500 !important;
+    margin-right: 4px !important;
+}
+
+.spec-value {
+    display: inline-block !important;
+    text-align: right !important;
+    float: right !important;
+}
+
+/* Ensure proper display for grid items */
+.specs-grid .grid-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+/* Fix for collapsed sections */
+.specs-grid .collapsed-section {
+    display: none !important;
+}
+
+/* Ensure the section toggle works properly */
+.specs-toggle-container {
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 8px 0 !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.specs-toggle-label {
+    font-weight: 500 !important;
+}
+
+.specs-toggle-icon {
+    transition: transform 0.3s ease !important;
+}
+
+.specs-toggle-icon.expanded {
+    transform: rotate(180deg) !important;
+}
+
+/* Fix for Weight card to prevent truncation */
+.spec-card[style*="weight"],
+.spec-card-header:has(span:contains("Weight")),
+.spec-card:has(.spec-card-header span:contains("Weight")),
+.weight-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 100px !important;
+}
+
+.spec-card:has(.spec-card-header span:contains("Weight")) .spec-card-content,
+.spec-card:has(.spec-card-header span:contains("Weight")) .spec-value,
+.weight-card .spec-card-content,
+.weight-card .spec-value {
+    overflow: visible !important;
+    white-space: normal !important;
+    text-overflow: clip !important;
+    word-break: break-word !important;
+    min-height: 30px !important; /* Ensure minimum height */
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+} 
